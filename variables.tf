@@ -56,7 +56,7 @@ variable dynamic_logging_config {
     prefix = "<your-bucket-prefix>"
     }]
 
-    EOF
+EOF
 
   type    = any
   default = []
@@ -94,7 +94,7 @@ variable minimum_protocol_version {
     and have specified sni-only in ssl_support_method, TLSv1 or later must be specified. 
     If you have specified vip in ssl_support_method, only SSLv3 or TLSv1 can be specified. 
     If you have specified cloudfront_default_certificate, TLSv1 must be specified.
-    EOF
+EOF
 
   type = string
 }
@@ -109,6 +109,12 @@ variable region {
   description = "Target AWS region"
   type        = string
   default     = "us-east-1"
+}
+
+variable profile {
+  description = "Target AWS Profile"
+  type        = string
+  default     = ""
 }
 
 variable restriction_location {

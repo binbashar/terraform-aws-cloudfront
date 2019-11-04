@@ -198,7 +198,7 @@ resource "aws_cloudfront_distribution" "cloudfront_distribution" {
   }
 
   viewer_certificate {
-    iam_certificate_id       = "${var.ssl_certificate}"
+    acm_certificate_arn      = "${var.ssl_certificate}"
     minimum_protocol_version = "${var.minimum_protocol_version}"
     ssl_support_method       = "${var.ssl_support_method}"
   }
